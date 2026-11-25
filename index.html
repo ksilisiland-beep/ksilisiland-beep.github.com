@@ -1,53 +1,564 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ksilisi Land — 15 მიწის ნაკვეთი გუდალეთში, საქართველოს ულამაზეს მთებში. იპოვე შენი ადგილი ბუნებაში.">
-  <title>Ksilisi Land | შენი ადგილი ბუნებაში</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--pine:#193b32;--pine2:#274b3d;--sage:#dbe4d8;--cream:#f7f5ef;--sand:#e9e3d7;--ink:#1b2823;--muted:#65736c;--white:#fff;--accent:#c8a77a}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
-    .nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center;color:var(--pine)}.brand-mark{width:40px;height:40px;border:1px solid #a5b7a6;border-radius:50%;display:grid;place-items:center;font-family:'Playfair Display';font-size:21px}.brand-name{font-size:15px;font-weight:700;letter-spacing:2px}.brand-sub{font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-top:3px}.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;color:#47574f}.navlinks a:hover{color:var(--accent)}.nav-cta,.button{background:var(--pine);color:white;padding:13px 20px;border-radius:4px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:9px;transition:.2s}.nav-cta:hover,.button:hover{background:#315c4b;transform:translateY(-1px)}
-    .hero{min-height:640px;position:relative;overflow:hidden;border-radius:8px;background:#455f4d url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85') center 48%/cover;color:white;display:flex;align-items:center}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,35,29,.75),rgba(13,35,29,.36) 55%,rgba(13,35,29,.08)),linear-gradient(0deg,rgba(13,35,29,.35),transparent 55%)}.hero-content{position:relative;max-width:670px;padding:75px 70px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#d6e1d6;font-weight:600}.hero h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(48px,6.5vw,82px);line-height:1.06;margin:24px 0}.hero h1 em{font-weight:500;color:#d9c19e}.hero p{max-width:490px;color:#e5e9e4;line-height:1.75;font-size:16px}.hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.button.light{background:white;color:var(--pine)}.button.outline{border:1px solid rgba(255,255,255,.65);background:transparent}.hero-note{position:absolute;bottom:30px;right:35px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#f1f2ec}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);padding:34px 10px 38px;border-bottom:1px solid #dedbd1}.stat{padding:5px 25px;border-left:1px solid #d8d8ce}.stat:first-child{border:0}.stat strong{display:block;color:var(--pine);font-family:'Playfair Display';font-size:31px;font-weight:500}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:6px;letter-spacing:.5px}
-    section{padding:94px 0}.section-kicker{color:#8b7556;text-transform:uppercase;letter-spacing:2.5px;font-size:11px;font-weight:700}.section-title{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,52px);font-weight:500;color:var(--pine);line-height:1.16;margin:16px 0}.section-copy{color:var(--muted);line-height:1.8;max-width:570px;font-size:15px}.about-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:72px;align-items:center}.about-image{height:490px;border-radius:6px;overflow:hidden;position:relative}.about-image img{width:100%;height:100%;object-fit:cover}.image-label{position:absolute;bottom:20px;left:20px;background:rgba(25,59,50,.9);color:white;padding:15px 18px;border-radius:3px}.image-label b{display:block;font-family:'Playfair Display';font-size:20px;font-weight:500}.image-label span{font-size:11px;opacity:.8;letter-spacing:1px}.features{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}.feature{display:flex;gap:14px}.feature-icon{width:38px;height:38px;flex:0 0 38px;border:1px solid #cbd5c9;border-radius:50%;display:grid;place-items:center;color:var(--pine)}.feature h3{font-size:14px;margin:2px 0 7px;color:var(--pine)}.feature p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
-    .plots{background:#e9eee6}.plots-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:36px}.plot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.plot{background:var(--cream);padding:24px;border-radius:5px;border:1px solid #dbe1d8}.plot-top{display:flex;justify-content:space-between;align-items:center}.plot-number{font-family:'Playfair Display';font-size:28px;color:var(--pine)}.plot-status{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8b7556;border:1px solid #d8c7ac;padding:6px 9px;border-radius:30px}.plot-size{font-size:25px;color:var(--pine);margin:20px 0 5px}.plot-size small{font-size:13px;color:var(--muted)}.plot p{font-size:12px;color:var(--muted);margin:0}.plot-footer{margin-top:20px;border-top:1px solid #e1dfd7;padding-top:14px;font-size:12px;color:var(--pine);display:flex;justify-content:space-between}.plot-footer span:last-child{letter-spacing:1px}
-    .gallery-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-template-rows:250px 250px;gap:14px}.gallery-grid img{height:100%;width:100%;object-fit:cover;border-radius:5px}.gallery-grid img:first-child{grid-row:span 2}.gallery-grid img:last-child{grid-column:2 / 4}.gallery-note{font-size:11px;color:var(--muted);margin-top:14px}
-    .contact{background:var(--pine);color:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.contact .section-kicker{color:#cbb18d}.contact .section-title{color:white}.contact .section-copy{color:#c8d2ca}.contact-details{display:grid;gap:22px;margin-top:35px}.contact-item{display:flex;gap:16px;align-items:center}.contact-item .icon{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center}.contact-item small{color:#b7c5bc;display:block;font-size:11px;letter-spacing:1px;margin-bottom:5px}.contact-item strong{font-weight:500}.contact-card{background:#f2f0e8;color:var(--pine);padding:38px;border-radius:6px}.contact-card h3{font-family:'Playfair Display';font-size:30px;font-weight:500;margin:0 0 15px}.contact-card p{color:var(--muted);font-size:14px;line-height:1.7}.contact-card .button{margin-top:12px}.contact-card .button.secondary{background:transparent;color:var(--pine);border:1px solid #c5cfc4}.footer{background:#102a23;color:#b8c6bd;padding:28px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}.footer-brand{color:white;letter-spacing:1.8px;font-weight:700}.footer a:hover{color:white}.mobile-menu{display:none}
-    @media(max-width:800px){.navlinks{gap:14px}.navlinks a:not(.nav-cta){display:none}.hero{min-height:580px}.hero-content{padding:55px 35px}.hero-note{display:none}.stats{grid-template-columns:repeat(2,1fr);gap:22px}.stat:nth-child(3){border:0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:38px}.about-image{height:380px}.plots-head{display:block}.plot-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}.gallery-grid img:first-child{grid-row:auto}.gallery-grid img:last-child{grid-column:auto}.gallery-grid img:nth-child(2){grid-column:span 1}.gallery-grid img:nth-child(3){grid-column:span 1}.contact-card{padding:30px}}
-    @media(max-width:520px){.wrap{width:min(100% - 28px,1160px)}.nav{height:72px}.brand-mark{width:34px;height:34px}.brand-name{font-size:13px}.brand-sub{font-size:9px}.nav-cta{padding:11px 13px;font-size:12px}.hero{min-height:570px;border-radius:5px}.hero-content{padding:40px 24px}.hero h1{font-size:52px;margin:19px 0}.hero p{font-size:14px}.hero-buttons{gap:10px}.button{padding:12px 15px}.stats{padding:26px 0}.stat{padding:5px 12px}.stat strong{font-size:26px}.stat span{font-size:11px}section{padding:68px 0}.section-title{font-size:37px}.features{gap:24px 12px}.feature{gap:9px}.feature-icon{width:32px;height:32px;flex-basis:32px}.feature h3{font-size:12px}.feature p{font-size:11px}.plot-grid{grid-template-columns:1fr}.plot{padding:20px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:190px 190px 190px;gap:9px}.footer-inner{align-items:flex-start;flex-direction:column}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ksilisi Land | გუდალეთი</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans Georgian', sans-serif;
+  background: #f5f3ed;
+  color: #183b32;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: #092e28;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.4)),
+    url('landscape.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 6vw, 70px);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: #d8c6a0;
+  color: #183b32;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.button:hover {
+  background: white;
+}
+
+section {
+  padding: 80px 7%;
+}
+
+.intro {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  color: #6b756e;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.stat h3 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.stat p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #777;
+}
+
+.map-section {
+  background: #e9e7df;
+}
+
+.map-section h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.map-section > p {
+  text-align: center;
+  color: #6b756e;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+.map-container {
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.map-image {
+  width: 100%;
+  display: block;
+}
+
+.plot-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: clamp(28px, 4vw, 42px);
+  height: clamp(28px, 4vw, 42px);
+  border-radius: 50%;
+  border: 2px solid white;
+  background: #315f46;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0,0,0,.3);
+  transition: .2s;
+}
+
+.plot-button:hover {
+  background: #d3b77e;
+  color: #183b32;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.plot-button.sold {
+  background: #9c4942;
+}
+
+.plot-button.reserved {
+  background: #c69b45;
+  color: #183b32;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #555;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.available { background: #315f46; }
+.sold-dot { background: #9c4942; }
+.reserved-dot { background: #c69b45; }
+
+.gallery {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.contact {
+  text-align: center;
+  background: #092e28;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  color: #d0d8d3;
+  line-height: 2;
+}
+
+footer {
+  text-align: center;
+  background: #061f1b;
+  color: #aaa;
+  padding: 25px;
+  font-size: 12px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #f5f3ed;
+  color: #183b32;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 35px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.modal-content p {
+  margin: 15px 0;
+  color: #626d65;
+}
+
+.modal-content strong {
+  color: #183b32;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #183b32;
+}
+
+.modal .button {
+  margin-top: 20px;
+}
+
+@media(max-width:600px) {
+  header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+
+  .map-container {
+    border-radius: 5px;
+  }
+
+  .legend {
+    gap: 12px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header class="wrap nav">
-    <a class="brand" href="#top" aria-label="Ksilisi Land home"><div class="brand-mark">K</div><div><div class="brand-name">KSILISI LAND</div><div class="brand-sub">შენი ადგილი ბუნებაში</div></div></a>
-    <nav class="navlinks" aria-label="მთავარი ნავიგაცია"><a href="#about">ადგილი</a><a href="#plots">ნაკვეთები</a><a href="#gallery">გალერეა</a><a href="#contact" class="nav-cta">დაგვიკავშირდით ↗</a></nav>
-  </header>
-  <main>
-    <div class="wrap" id="top">
-      <section class="hero" style="padding:0">
-        <div class="hero-content"><div class="eyebrow">Gudaleti · Georgia</div><h1>იპოვე შენი ადგილი<br><em>ბუნებაში.</em></h1><p>სივრცე სუნთქვისთვის. ადგილი ოცნებებისთვის. აღმოაჩინე შენი მიწის ნაკვეთი საქართველოს ულამაზეს და მშვიდ მთიან გარემოში.</p><div class="hero-buttons"><a href="#plots" class="button light">ნაკვეთების ნახვა ↗</a><a href="#contact" class="button outline">დაგვიკავშირდით</a></div></div>
-        <div class="hero-note">15 ნაკვეთი · მთის გარემო</div>
-      </section>
-      <div class="stats"><div class="stat"><strong>15</strong><span>მიწის ნაკვეთები</span></div><div class="stat"><strong>525–600 m²</strong><span>ნაკვეთების ფართობი</span></div><div class="stat"><strong>Gudaleti</strong><span>მთიანი გარემო</span></div><div class="stat"><strong>Your vision</strong><span>შენი სივრცე</span></div></div>
+
+<header>
+  <img src="logo.png" class="logo" alt="Ksilisi Land">
+  <a href="#contact">კონტაქტი ↗</a>
+</header>
+
+<!-- მთავარი ფოტო -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>სივრცე ახალი დასაწყისისთვის</h1>
+    <p>
+      შენი ადგილი ბუნებაში.<br>
+      გუდალეთი, საქართველო.
+    </p>
+    <a href="#plots" class="button">ნაკვეთების ნახვა</a>
+  </div>
+</div>
+
+<!-- მოკლე აღწერა -->
+<section>
+  <div class="intro">
+    <h2>Ksilisi Land</h2>
+    <p>
+      15 მიწის ნაკვეთი ულამაზეს მთიან გარემოში.
+      ადგილი სიმშვიდისთვის, ბუნებისთვის
+      და შენი მომავალი იდეებისთვის.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <h3>15</h3>
+        <p>მიწის ნაკვეთი</p>
+      </div>
+
+      <div class="stat">
+        <h3>525–600</h3>
+        <p>კვ.მ</p>
+      </div>
+
+      <div class="stat">
+        <h3>გუდალეთი</h3>
+        <p>საქართველო</p>
+      </div>
     </div>
-    <section id="about"><div class="wrap about-grid"><div><div class="section-kicker">უფრო ახლოს იმასთან, რაც მნიშვნელოვანია</div><h2 class="section-title">მშვიდი თავშესაფარი.<br>ულამაზესი ხედები.</h2><p class="section-copy">გუდალეთის მთიან გარემოში Ksilisi Land გთავაზობთ ღია სივრცეს, სუფთა ჰაერსა და თავისუფლებას, შექმნა შენი ადგილი. იქნება ეს დასასვენებელი სახლი თუ მომავალი საცხოვრებელი, შენი ისტორია აქ შეიძლება დაიწყოს.</p><div class="features"><div class="feature"><div class="feature-icon">⌁</div><div><h3>მთის ხედები</h3><p>ულამაზესი გარემო და ფართო ხედები.</p></div></div><div class="feature"><div class="feature-icon">⌂</div><div><h3>შენი პირადი სივრცე</h3><p>მიწის ნაკვეთები to shape around your plans.</p></div></div><div class="feature"><div class="feature-icon">↟</div><div><h3>ბუნება და სიმშვიდე</h3><p>მშვიდი გარემო ქალაქის ხმაურისგან მოშორებით.</p></div></div><div class="feature"><div class="feature-icon">◇</div><div><h3>მხოლოდ 15 ნაკვეთი</h3><p>პროექტი შეზღუდული რაოდენობის ნაკვეთებით.</p></div></div></div></div><div class="about-image"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85" alt="Mountain valley and peaceful landscape"><div class="image-label"><b>გუდალეთი, საქართველო</b><span>ადგილი, რომელსაც შენ შექმნი</span></div></div></div></section>
-    <section class="plots" id="plots"><div class="wrap"><div class="plots-head"><div><div class="section-kicker">შეარჩიე შენი ნაკვეთი</div><h2 class="section-title">შენი მიწა.<br>შენი შესაძლებლობები.</h2><p class="section-copy">გაეცანი ჩვენს 15 მიწის ნაკვეთს — სივრცეს, სადაც შეგიძლია წარმოიდგინო და შექმნა შენი მომავალი.</p></div><a href="#contact" class="button">დაგვიკავშირდი ↗</a></div><div class="plot-grid">
-      <article class="plot"><div class="plot-top"><span class="plot-number">01</span><span class="plot-status">ნაკვეთი პროექტში</span></div><div class="plot-size">525–600 <small>m²</small></div><p>ინდივიდუალური მიწის ნაკვეთი</p><div class="plot-footer"><span>გუდალეთი, საქართველო</span><span>KSILISI</span></div></article>
-      <article class="plot"><div class="plot-top"><span class="plot-number">02</span><span class="plot-status">ნაკვეთი პროექტში</span></div><div class="plot-size">525–600 <small>m²</small></div><p>ინდივიდუალური მიწის ნაკვეთი</p><div class="plot-footer"><span>გუდალეთი, საქართველო</span><span>KSILISI</span></div></article>
-      <article class="plot"><div class="plot-top"><span class="plot-number">03</span><span class="plot-status">ნაკვეთი პროექტში</span></div><div class="plot-size">525–600 <small>m²</small></div><p>ინდივიდუალური მიწის ნაკვეთი</p><div class="plot-footer"><span>გუდალეთი, საქართველო</span><span>KSILISI</span></div></article>
-      <article class="plot"><div class="plot-top"><span class="plot-number">04</span><span class="plot-status">ნაკვეთი პროექტში</span></div><div class="plot-size">525–600 <small>m²</small></div><p>ინდივიდუალური მიწის ნაკვეთი</p><div class="plot-footer"><span>გუდალეთი, საქართველო</span><span>KSILISI</span></div></article>
-      <article class="plot"><div class="plot-top"><span class="plot-number">05</span><span class="plot-status">ნაკვეთი პროექტში</span></div><div class="plot-size">525–600 <small>m²</small></div><p>ინდივიდუალური მიწის ნაკვეთი</p><div class="plot-footer"><span>გუდალეთი, საქართველო</span><span>KSILISI</span></div></article>
-      <article class="plot"><div class="plot-top"><span class="plot-number">06–15</span><span class="plot-status">10 plots</span></div><div class="plot-size">525–600 <small>m²</small></div><p>პროექტში სხვა ნაკვეთებიც ხელმისაწვდომია</p><div class="plot-footer"><span>გუდალეთი, საქართველო</span><span>KSILISI</span></div></article>
-    </div><p class="gallery-note">ნაკვეთების ფართობი and availability may vary. დაგვიკავშირდით for the site plan, exact dimensions and current availability.</p></div></section>
-    <section id="gallery"><div class="wrap"><div class="section-kicker">გარემო, რომელიც გარშემოა</div><h2 class="section-title">ხედები, რომელთა ფონზეც<br>გაღვიძება სასიამოვნოა.</h2><p class="section-copy" style="margin-bottom:32px">წარმოიდგინე დილა მთებით, მწვანე ფერდობებითა და ბუნების მშვიდი რიტმით გარშემორტყმული.</p><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1300&q=85" alt="Mountain range"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85" alt="Forest in nature"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85" alt="Mountain valley"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85" alt="Wide scenic mountain landscape"></div><p class="gallery-note">Photography is illustrative. დაგვიკავშირდით to see photographs of the actual plots and surroundings.</p></div></section>
-    <section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="section-kicker">შენი იდეა რეალობად ვაქციოთ</div><h2 class="section-title">შენი მთის<br>ისტორია აქ იწყება.</h2><p class="section-copy">ნაკვეთით დაინტერესდი ან პროექტის მონახულება გსურს? დაგვიკავშირდი და მოგაწვდით დამატებით ინფორმაციას, ხელმისაწვდომობასა და მიმართულებებს.</p><div class="contact-details"><div class="contact-item"><div class="icon">☎</div><div><small>დაგვირეკე</small><strong>+995 568 41 41 74</strong></div></div><div class="contact-item"><div class="icon">⌖</div><div><small>პროექტის მდებარეობა</small><strong>გუდალეთი, საქართველო</strong></div></div></div></div><div class="contact-card"><h3>მოდი და ნახე ეს ადგილი.</h3><p>მოდი, ვისაუბროთ შენს გეგმებზე. დაგვიკავშირდი ტელეფონით ან გახსენი მდებარეობა Google Maps-ში.</p><a class="button" href="https://wa.me/995568414174" target="_blank" rel="noopener">მოგვწერე WhatsApp-ზე ↗</a><br><a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Gudaleti%2C+Georgia" target="_blank" rel="noopener">მდებარეობის ნახვა რუკაზე ↗</a></div></div></section>
-  </main>
-  <footer class="footer"><div class="wrap footer-inner"><div class="footer-brand">KSILISI LAND</div><div>გუდალეთი, საქართველო · შენი ადგილი ბუნებაში</div><div>© <span id="year"></span> Ksilisi Land</div></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  </div>
+</section>
+
+<!-- ნაკვეთების რუკა -->
+<section class="map-section" id="plots">
+
+  <h2>აირჩიე შენი ნაკვეთი</h2>
+  <p>დააჭირე რუკაზე ნაკვეთის ნომერს დეტალების სანახავად</p>
+
+  <div class="map-container">
+
+    <img src="plots.jpg" class="map-image" alt="ნაკვეთების რუკა">
+
+    <!--
+      BUTTON POSITION:
+      left = ჰორიზონტალური მდებარეობა %
+      top = ვერტიკალური მდებარეობა %
+      სურვილისამებრ შეგიძლია შეცვალო.
+    -->
+
+    <button class="plot-button" style="left:15%;top:12%" onclick="showPlot(1)">1</button>
+    <button class="plot-button" style="left:29%;top:18%" onclick="showPlot(2)">2</button>
+    <button class="plot-button" style="left:43%;top:24%" onclick="showPlot(3)">3</button>
+    <button class="plot-button" style="left:57%;top:30%" onclick="showPlot(4)">4</button>
+    <button class="plot-button" style="left:71%;top:36%" onclick="showPlot(5)">5</button>
+
+    <button class="plot-button" style="left:22%;top:37%" onclick="showPlot(6)">6</button>
+    <button class="plot-button" style="left:36%;top:43%" onclick="showPlot(7)">7</button>
+    <button class="plot-button" style="left:50%;top:49%" onclick="showPlot(8)">8</button>
+    <button class="plot-button" style="left:64%;top:55%" onclick="showPlot(9)">9</button>
+    <button class="plot-button" style="left:78%;top:61%" onclick="showPlot(10)">10</button>
+
+    <button class="plot-button" style="left:28%;top:65%" onclick="showPlot(11)">11</button>
+    <button class="plot-button" style="left:42%;top:71%" onclick="showPlot(12)">12</button>
+    <button class="plot-button" style="left:56%;top:77%" onclick="showPlot(13)">13</button>
+    <button class="plot-button" style="left:70%;top:83%" onclick="showPlot(14)">14</button>
+    <button class="plot-button" style="left:84%;top:89%" onclick="showPlot(15)">15</button>
+
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <span class="dot available"></span> ხელმისაწვდომი
+    </div>
+
+    <div class="legend-item">
+      <span class="dot reserved-dot"></span> დაჯავშნილი
+    </div>
+
+    <div class="legend-item">
+      <span class="dot sold-dot"></span> გაყიდული
+    </div>
+  </div>
+
+</section>
+
+<!-- ფოტო -->
+<section>
+  <div class="gallery">
+    <img src="landscape.jpg" alt="გუდალეთი">
+  </div>
+</section>
+
+<!-- კონტაქტი -->
+<section class="contact" id="contact">
+  <h2>შენი ადგილი გელოდება</h2>
+  <p>
+    დაინტერესდი მიწის ნაკვეთით?<br>
+    დაგვიკავშირდი დამატებითი ინფორმაციისთვის.
+  </p>
+
+  <!-- შეცვალე ტელეფონის ნომერი შენი ნომრით -->
+  <a href="tel:+995555123456" class="button">
+    დაგვიკავშირდი
+  </a>
+</section>
+
+<footer>
+  Ksilisi Land · გუდალეთი, საქართველო
+</footer>
+
+<!-- ნაკვეთის დეტალების ფანჯარა -->
+<div class="modal" id="plotModal" onclick="closeOutside(event)">
+  <div class="modal-content">
+
+    <button class="close" onclick="closeModal()">&times;</button>
+
+    <h2 id="plotTitle">ნაკვეთი</h2>
+
+    <p>ფართობი: <strong id="plotSize"></strong></p>
+    <p>ფასი: <strong id="plotPrice"></strong></p>
+    <p>სტატუსი: <strong id="plotStatus"></strong></p>
+
+    <a href="#contact" class="button" onclick="closeModal()">
+      დაინტერესება
+    </a>
+
+  </div>
+</div>
+
+<script>
+
+// ნაკვეთების მონაცემები
+// შეგიძლია შეცვალო ფართობი, ფასი და სტატუსი
+
+const plots = [
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:525, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:600, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:525, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:525, price:"შეთანხმებით", status:"ხელმისაწვდომი"},
+  {size:525, price:"შეთანხმებით", status:"ხელმისაწვდომი"}
+];
+
+// რუკაზე ნაკვეთზე დაჭერა
+function showPlot(number) {
+
+  const plot = plots[number - 1];
+
+  document.getElementById("plotTitle").innerText =
+    "ნაკვეთი " + number;
+
+  document.getElementById("plotSize").innerText =
+    plot.size + " მ²";
+
+  document.getElementById("plotPrice").innerText =
+    plot.price;
+
+  document.getElementById("plotStatus").innerText =
+    plot.status;
+
+  document.getElementById("plotModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("plotModal").style.display = "none";
+}
+
+function closeOutside(event) {
+  if(event.target.id === "plotModal") {
+    closeModal();
+  }
+}
+
+// სტატუსების ფერების ავტომატური შეცვლა
+function updatePlotColors() {
+
+  const buttons = document.querySelectorAll(".plot-button");
+
+  plots.forEach((plot, index) => {
+
+    const button = buttons[index];
+
+    button.classList.remove("sold", "reserved");
+
+    if(plot.status === "გაყიდული") {
+      button.classList.add("sold");
+    }
+
+    if(plot.status === "დაჯავშნილი") {
+      button.classList.add("reserved");
+    }
+
+  });
+}
+
+updatePlotColors();
+
+</script>
+
 </body>
 </html>

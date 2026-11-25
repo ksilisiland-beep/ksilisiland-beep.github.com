@@ -43,12 +43,20 @@ header a {
 
 .hero {
   min-height: 85vh;
+  width: 100%;
+
   background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.4)),
-    url('landscape.jpg') center/cover;
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.4)),
+    url("landscape.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   color: white;
   padding: 30px;

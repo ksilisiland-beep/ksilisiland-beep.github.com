@@ -383,28 +383,28 @@ footer {
   .social-links a {
     opacity: 1;
   }
-}
-@media (min-width: 769px) {
-  .social-links {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    width: auto !important;
+ width: auto !important;
+    z-index: 1000 !important;
   }
 
   .social-links a {
-    display: inline-flex !important;
-    width: auto !important;
-    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .social-links svg {
     width: 32px !important;
     height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
   }
 }
+
 </style>
 </head>
 

@@ -340,29 +340,49 @@ footer {
   .legend {
     gap: 12px;
   }
- .social-links {
+.social-links {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
+  gap: 18px;
+  flex-shrink: 0;
 }
 
 .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: inherit;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  color: white;
+  opacity: 1;
+  transition: transform 0.2s ease;
 }
 
 .social-links svg {
-  width: 21px;
-  height: 21px;
+  width: 27px;
+  height: 27px;
+  display: block;
 }
 
 .social-links a:hover {
-  transform: translateY(-2px);
-  opacity: 0.75;
+  transform: scale(1.15);
 }
+
+/* მობილურის ვერსია */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .social-links svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .social-links a {
+    opacity: 1;
+  }
 }
 </style>
 </head>

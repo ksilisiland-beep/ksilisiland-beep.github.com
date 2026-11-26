@@ -341,67 +341,50 @@ footer {
     gap: 12px;
   }
 .social-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  flex-shrink: 0;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  flex-shrink: 0 !important;
+  width: fit-content !important;
 }
 
 .social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  opacity: 1;
-  transition: transform 0.2s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  opacity: 1 !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 .social-links svg {
-  width: 27px;
-  height: 27px;
-  display: block;
+  display: block !important;
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
 }
 
 .social-links a:hover {
   transform: scale(1.15);
 }
 
-/* მობილურის ვერსია */
+/* Mobile */
 @media (max-width: 768px) {
   .social-links {
-    flex-direction: row;
-    gap: 16px;
+    flex-direction: row !important;
+    gap: 16px !important;
   }
 
   .social-links svg {
-    width: 26px;
-    height: 26px;
-  }
-
-  .social-links a {
-    opacity: 1;
-  }
- width: auto !important;
-    z-index: 1000 !important;
-  }
-
-  .social-links a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 40px !important;
-    height: 40px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .social-links svg {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
+    width: 28px !important;
+    height: 28px !important;
   }
 }
 
